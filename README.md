@@ -4,7 +4,7 @@ HTML5 Web Notification用于浏览器的桌面通知提醒，浏览器最小化�
 ## demo
 [查看演示](https://penglin254.github.io/Notification/example/index.html)
 
-![image](https://penglin254.github.io/Notification/example/img/notify.gif?121231) 
+![image](https://penglin254.github.io/Notification/example/img/notify.gif?1111) 
 
 ## 兼容性
 当前只有 Chrome 19+ Safari 6+支持，<a href="http://caniuse.com/#feat=notifications">点击查看Notification API 支持情况</a>
