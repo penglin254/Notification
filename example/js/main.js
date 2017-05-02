@@ -56,13 +56,11 @@
     $("span#txNotice").click(function () {
         Notify.showNotice($(".title_txt>input").val(), $(".content_txt>textarea").val(), $(".file_img>img").attr("src"));
         Notify.clickNotice();
-        Notify.autoClose(3000);
+        Notify.autoClose(5000);
     })
 
     $("span#qcNotice").click(function () {
-        if (Notify.options != null) {
-            Notify.clearNotice();
-        }
+        Notify.clearNotice();
     })
 
     $("span#qcaNotice").click(function () {

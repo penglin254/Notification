@@ -11,6 +11,7 @@
     };
 
     window.Notify = Notify;
+    //设置参数;
     var options = {
         noticeList: [],//通知存储数组
         notification: null, //通知对象
@@ -19,33 +20,50 @@
         icon: 'img/logo.png',
         content: "通知...",
         time: 1000
-    };//设置参数;
+    };
 
 
     Notify.showNotice = function (title, body, icon) {
         if (!("Notification" in window)) {
             alert("抱歉，您的浏览器不支持桌面通知");
         }
-        else if (Notification.permission === "granted" || Notification.permission !== 'denied') {
+
+        else if (Notification.permission === "granted") {
             options.notification = new Notification(title ? title : options.title, {
                 body: body ? body : options.body,
                 icon: icon ? icon : options.icon
             });
             options.noticeList.push(options.notification);
+
+        } else if (Notification.permission !== "denied") {
+            Notification.requestPermission(function (permission) {
+                if (permission === "granted") {
+                    options.notification = new Notification(title ? title : options.title, {
+                        body: body ? body : options.body,
+                        icon: icon ? icon : options.icon
+                    });
+                    options.noticeList.push(options.notification);
+                }
+            });
         }
     };
 
 
     //单击通知
     Notify.clickNotice = function () {
-        options.notification.onclick = function () {
-            alert(options.notification.body);
-        };
+        if (options.notification != null) {
+            options.notification.onclick = function () {
+                alert(options.notification.body);
+            };
+        }
+
     };
 
     //清除通知
     Notify.clearNotice = function () {
-        options.notification.close();
+        // options.notification.close();
+        options.noticeList[options.noticeList.length - 1].close();
+        options.noticeList.pop();
     };
 
     //清除所有通知
@@ -57,7 +75,9 @@
 
     //自动关闭
     Notify.autoClose = function (time) {
-        time == null ? setTimeout(options.notification.close.bind(options.notification), options.time) : setTimeout(options.notification.close.bind(options.notification), time);
+        if (options.notification != null) {
+            time == null ? setTimeout(options.notification.close.bind(options.notification), options.time) : setTimeout(options.notification.close.bind(options.notification), time);
+        }
     };
 
 })(window);
