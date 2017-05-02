@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+# 关于浏览器的桌面通知
+HTML5 Web Notification用于浏览器的桌面通知提醒，浏览器最小化的时候依然可见。
 
-You can use the [editor on GitHub](https://github.com/penglin254/Notification/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## demo
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 兼容性
+当前只有 Chrome 19+ Safari 6+支持，<a href="http://caniuse.com/#feat=notifications">点击查看Notification API 支持情况</a>
 
-### Markdown
+## 使用
+使用前提：允许网站弹出通知
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+Notify.showNotice(标题，内容，图片路径) //弹出消息通知，参数不传则显示默认的标题图片和内容 
+Notify.clickNotice() //单击消息通知 
+Notify.autoClose(时间参数) //自动关闭消息通知，不传则默认传递1000ms 
+Notify.clearNotice() //清除单条通知
+Notify.clearAllNotice() //清除所有通知
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## 关于 1.0.0
+后续应该会更新移动端的显示情况
 
-### Jekyll Themes
+## 关于 notify.js
+1.有问题请提交github issue上。<br>
+2.有什么好的建议或者改进可以联系作者。
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/penglin254/Notification/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### 联系方式
+wechat : 139193411<br>
+qq : [139193411](http://wpa.qq.com/msgrd?v=3&uin=139193411&site=qq&menu=yes)

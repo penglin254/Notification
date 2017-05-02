@@ -1,0 +1,16 @@
+{
+  "es5": true,
+  "node": true,
+  "strict": true, //严格模式
+  "undef": true, //提示未定义的变量
+  "freeze": true, //原型链污染比较危险，默认打开
+  "indent": 4, //指定缩进大小为 4 个空格
+  "newcap": true, //要求构造函数大写
+  "plusplus": false, //不允许使用 ++ 和 -- 运算符
+  "bitwise": false, //是否阻止位运算符的使用
+  "debug": false,  //对代码中使用的 debugger 语句默认给出警告
+  "trailing": true, //字符串不允许以空格加斜杠的形式来换行
+  "funcscope": true, // 变量只能在函数域上定义，在代码块上定义的变量给出警告
+  "unused": true, //提示未使用的变量
+
+}

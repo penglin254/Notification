@@ -1,0 +1,27 @@
+{
+  "name": "Notification",
+  "homepage": "https://github.com/penglin254/Notification",
+  "authors": [
+    "penglin <139193411@qq.com>"
+  ],
+  "description": "浏览器桌面通知提醒",
+  "main": "src/notify.min.js",
+  "keywords": [
+    "notification",
+    "notify",
+    "浏览器桌面通知提醒"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "example/js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Web Notification</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<div class="container">
+    <div class="tip_container">使用须知：请在浏览器中允许桌面弹出通知,请上传图片，输入标题和内容弹出通知</div>
+    <div class="notify_container">
+        <div class="input_container">
+            <div class="file_img">
+                <input type="file">
+                <span>请上传通知所显示的图片</span>
+            </div>
+            <div class="title_txt">
+                <input type="text" placeholder="请输入通知标题">
+            </div>
+            <div class="content_txt">
+                <textarea name="context" cols="30" rows="11" placeholder="请输入弹出内容"></textarea>
+            </div>
+        </div>
+
+        <div class="button_container">
+            <span id="txNotice">弹出通知</span>
+            <span id="qcNotice">清除通知</span>
+            <span id="qcaNotice">清除所有通知</span>
+        </div>
+    </div>
+</div>
+<script src="js/lib/jquery/dist/jquery.min.js"></script>
+<script src="js/notify.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
